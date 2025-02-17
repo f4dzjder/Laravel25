@@ -33,4 +33,6 @@ Route::delete('/kategori/{idkategori}',[KategoriController::class,'delete']);
 Route::get('/kategori/{idkategori}/edit',[KategoriController::class,'edit']);
 Route::put('/kategori/{idkategori}',[KategoriController::class,'update']);
 
-Route::get('/registrasi',[AuthController::class,'tampilRegistrasi'])->name('registrasi');
+Route::get('/auth',[AuthController::class, 'index']); 
+Route::post('auth/login',[AuthController::class, 'login']); 
+Route::post('logout',[AuthController::class, 'logout']); 
